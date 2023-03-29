@@ -1,0 +1,142 @@
+{
+  "coffees": [
+    {
+      "id": 1,
+      "title": "Expresso Tradicional",
+      "tags": "TRADICIONAL",
+      "subtitle": "O tradicional café feito com água quente e grãos moídos",
+      "imgCoffees": "https://i.postimg.cc/tT671Bkb/Type-Expresso.png",
+      "price": "3,50"
+    },
+    {
+      "id": 2,
+      "title": "Expresso Americano",
+      "tags": "TRADICIONAL",
+      "subtitle": "Expresso diluído, menos intenso que o tradicional",
+      "imgCoffees": "https://i.postimg.cc/Cx4820KB/Type-Americano.png",
+      "price": "4,00"
+    },
+    {
+      "id": 3,
+      "title": "Expresso Cremoso",
+      "tags": "TRADICIONAL",
+      "subtitle": "Café expresso tradicional com espuma cremosa",
+      "imgCoffees": "https://i.postimg.cc/L8sXk9DN/Type-Expresso-Cremoso.png",
+      "price": "5,00"
+    },
+    {
+      "id": 4,
+      "title": "Expresso Gelado",
+      "tags": "TRADICIONAL",
+      "subtitle": "Bebida preparada com café expresso e cubos de gelo",
+      "imgCoffees": "https://i.postimg.cc/jqzLtkCQ/Type-Caf-Gelado.png",
+      "price": "6,50"
+    },
+    {
+      "id": 5,
+      "title": "Café com Leite",
+      "tags": "TRADICIONAL",
+      "subtitle": "Meio a meio de expresso traditional com leite vaporizado",
+      "imgCoffees": "https://i.postimg.cc/vT6q7Tb6/Type-Caf-com-Leite.png",
+      "price": "4,50"
+    },
+    {
+      "id": 6,
+      "title": "Latte",
+      "tags": "TRADICIONAL",
+      "subtitle": "Bebida com canela feita de doses iguais de café, leite e espuma",
+      "imgCoffees": "https://i.postimg.cc/s2Qg8TtW/Type-Latte.png",
+      "price": "6,00"
+    },
+    {
+      "id": 7,
+      "title": "Capuccino",
+      "tags": "TRADICIONAL",
+      "subtitle": "O tradicional café feito com água quente e grãos moídos",
+      "imgCoffees": "https://i.postimg.cc/QdnM02ns/Type-Capuccino.png",
+      "price": "6,50"
+    },
+    {
+      "id": 8,
+      "title": "Macchiato",
+      "tags": "TRADICIONAL",
+      "subtitle": "Café expresso misturado com um pouco de leite quente e espuma",
+      "imgCoffees": "https://i.postimg.cc/ZR6KYCYK/Type-Macchiato.png",
+      "price": "5,50"
+    },
+    {
+      "id": 9,
+      "title": "Mocaccino",
+      "tags": "TRADICIONAL",
+      "subtitle": "Café expresso com calda de chocolate, pouco leite e espuma",
+      "imgCoffees": "https://i.postimg.cc/tgK4HhjM/Type-Mochaccino.png",
+      "price": "9,99"
+    },
+    {
+      "id": 10,
+      "title": "Chocolate Quente",
+      "tags": "ESPECIAL",
+      "subtitle": "Bebida feita com chocolate dissolvido no leite quente e café",
+      "imgCoffees": "https://i.postimg.cc/kGdGWWYb/Type-Chocolate-Quente.png",
+      "price": "7,50"
+    },
+    {
+      "id": 11,
+      "title": "Cubano",
+      "tags": "ESPECIAL",
+      "subtitle": "Drink gelado de café expresso com rum, creme de leite e hortelã",
+      "imgCoffees": "https://i.postimg.cc/RhQFdq2b/Type-Cubano.png",
+      "price": "12,00"
+    },
+    {
+      "id": 12,
+      "title": "Havaiano",
+      "tags": "ESPECIAL",
+      "subtitle": "Bebida adocicada preparada com café e leite de coco",
+      "imgCoffees": "https://i.postimg.cc/ZKHnyB8W/Type-Havaiano.png",
+      "price": "10,50"
+    },
+    {
+      "id": 13,
+      "title": "Árabe",
+      "tags": "ESPECIAL",
+      "subtitle": "Bebida preparada com grãos de café árabe e especiarias",
+      "imgCoffees": "https://i.postimg.cc/9fKrF6G1/Type-rabe.png",
+      "price": "11,00"
+    },
+    {
+      "id": 14,
+      "title": "Irlandês",
+      "tags": "ESPECIAL",
+      "subtitle": "Bebida a base de café, uísque irlandês, açúcar e chantilly",
+      "imgCoffees": "https://i.postimg.cc/fTDkLj94/Type-Irland-s.png",
+      "price": "12,00"
+    }
+  ],
+  "shoppingCart": [
+    {
+      "coffeeQuantity": 3,
+      "coffeePrice": "5,00",
+      "coffeeName": "Expresso Cremoso",
+      "id": 1
+    },
+    {
+      "coffeeQuantity": 2,
+      "coffeePrice": "6,50",
+      "coffeeName": "Expresso Gelado",
+      "id": 2
+    },
+    {
+      "coffeeQuantity": 3,
+      "coffeePrice": "6,50",
+      "coffeeName": "Expresso Gelado",
+      "id": 3
+    },
+    {
+      "coffeeQuantity": 3,
+      "coffeePrice": "4,00",
+      "coffeeName": "Expresso Americano",
+      "id": 4
+    }
+  ]
+}
