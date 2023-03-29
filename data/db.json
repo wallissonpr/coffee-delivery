@@ -137,6 +137,12 @@
       "coffeePrice": "4,00",
       "coffeeName": "Expresso Americano",
       "id": 4
+    },
+    {
+      "coffeeQuantity": 1,
+      "coffeePrice": "4,00",
+      "coffeeName": "Expresso Americano",
+      "id": 5
     }
   ]
 }

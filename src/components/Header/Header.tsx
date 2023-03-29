@@ -25,7 +25,8 @@ export function Header() {
           <NavLink to={'/checkout'}>
             <ShoppingCart size={20} weight="fill" />
             {shoppingCartDB?.map((qtd) => {
-              return qtd.coffeeQuantity
+              const coffeeCartQuantity = qtd.coffeeQuantity
+              return coffeeCartQuantity
             })}
           </NavLink>
         </HeaderShoppingCart>
