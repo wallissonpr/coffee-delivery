@@ -7,9 +7,14 @@ import {
   HeaderNav,
   HeaderGeoLocation,
   HeaderShoppingCart,
+  HeaderShoppingCartTotal,
 } from './styled'
 export function Header() {
   const { shoppingCartDB } = useContext(GlobalContext)
+
+  const shoppingCartItens = shoppingCartDB?.map((qtd) => qtd.coffeeQuantity)
+
+  console.log(shoppingCartItens)
   return (
     <HeaderContainer>
       <NavLink to={'/'}>
@@ -24,10 +29,11 @@ export function Header() {
         <HeaderShoppingCart>
           <NavLink to={'/checkout'}>
             <ShoppingCart size={20} weight="fill" />
-            {shoppingCartDB?.map((qtd) => {
-              const coffeeCartQuantity = qtd.coffeeQuantity
-              return coffeeCartQuantity
-            })}
+            {shoppingCartItens && shoppingCartItens.length > 0 && (
+              <HeaderShoppingCartTotal>
+                {shoppingCartItens.reduce((total, qty) => total + qty)}
+              </HeaderShoppingCartTotal>
+            )}
           </NavLink>
         </HeaderShoppingCart>
       </HeaderNav>

@@ -115,7 +115,7 @@
   ],
   "shoppingCart": [
     {
-      "coffeeQuantity": 3,
+      "coffeeQuantity": 4,
       "coffeePrice": "5,00",
       "coffeeName": "Expresso Cremoso",
       "id": 1
@@ -133,16 +133,10 @@
       "id": 3
     },
     {
-      "coffeeQuantity": 3,
-      "coffeePrice": "4,00",
-      "coffeeName": "Expresso Americano",
+      "coffeeQuantity": 2,
+      "coffeePrice": "6,50",
+      "coffeeName": "Expresso Gelado",
       "id": 4
-    },
-    {
-      "coffeeQuantity": 1,
-      "coffeePrice": "4,00",
-      "coffeeName": "Expresso Americano",
-      "id": 5
     }
   ]
 }

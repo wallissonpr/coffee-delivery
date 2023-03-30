@@ -23,7 +23,7 @@ export function CoffeeProduct({ data }: CoffeeProductProps) {
   const { setShoppingCartDB, shoppingCartDB } = useContext(GlobalContext)
 
   const newCartFormValidationSchema = zod.object({
-    coffeeQuantity: zod.number().min(1).max(60),
+    coffeeQuantity: zod.number().min(1).max(30, 'O limite é de 30 cafés.'),
   })
 
   type NewCartFormData = zod.infer<typeof newCartFormValidationSchema>
@@ -31,7 +31,7 @@ export function CoffeeProduct({ data }: CoffeeProductProps) {
   const newCartForm = useForm<NewCartFormData>({
     resolver: zodResolver(newCartFormValidationSchema),
     defaultValues: {
-      coffeeQuantity: 0,
+      coffeeQuantity: undefined,
     },
   })
 

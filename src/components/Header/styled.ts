@@ -30,3 +30,17 @@ export const HeaderShoppingCart = styled(BaseHeaderNavBars)`
     color: ${(props) => props.theme['yellow-dark']};
   }
 `
+export const HeaderShoppingCartTotal = styled.span`
+  display: inline-block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  background-color: ${(props) => props.theme['yellow-dark']};
+  color: ${(props) => props.theme.white};
+  text-align: center;
+  font-size: 0.7rem;
+  line-height: 20px;
+  top: 60px;
+  transition: 1s;
+`
