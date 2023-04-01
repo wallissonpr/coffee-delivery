@@ -14,7 +14,6 @@ export function Header() {
 
   const shoppingCartItens = shoppingCartDB?.map((qtd) => qtd.coffeeQuantity)
 
-  console.log(shoppingCartItens)
   return (
     <HeaderContainer>
       <NavLink to={'/'}>
