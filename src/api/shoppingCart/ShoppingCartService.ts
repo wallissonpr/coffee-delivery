@@ -37,7 +37,7 @@ const createCart = async (
   }
 }
 const updateCartById = async (
-  id: string,
+  id: number,
   dataToUpdate: ShoppingCartProps,
 ): Promise<ShoppingCartProps[] | ApiException> => {
   try {
@@ -48,7 +48,7 @@ const updateCartById = async (
   }
 }
 const deleteCartById = async (
-  id: string,
+  id: number,
 ): Promise<undefined | ApiException> => {
   try {
     await Api().get(`/shoppingCart/${id}`)

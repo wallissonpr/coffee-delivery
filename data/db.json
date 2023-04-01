@@ -115,28 +115,16 @@
   ],
   "shoppingCart": [
     {
-      "coffeeQuantity": 4,
+      "coffeeQuantity": 2,
       "coffeePrice": "5,00",
       "coffeeName": "Expresso Cremoso",
       "id": 1
     },
     {
-      "coffeeQuantity": 2,
+      "coffeeQuantity": 1,
       "coffeePrice": "6,50",
-      "coffeeName": "Expresso Gelado",
+      "coffeeName": "Capuccino",
       "id": 2
-    },
-    {
-      "coffeeQuantity": 3,
-      "coffeePrice": "6,50",
-      "coffeeName": "Expresso Gelado",
-      "id": 3
-    },
-    {
-      "coffeeQuantity": 2,
-      "coffeePrice": "6,50",
-      "coffeeName": "Expresso Gelado",
-      "id": 4
     }
   ]
 }

@@ -9,6 +9,7 @@ import {
 interface GlobalContextType {
   coffeesCatalog: Coffees[] | undefined
   shoppingCartDB: ShoppingCartProps[] | undefined
+  shoppingCartItens: number
   setShoppingCartDB: (data: ShoppingCartProps[]) => void
 }
 
@@ -22,6 +23,7 @@ export function GlobalContextProvider({
 }: GlobalContextProviderProps) {
   const [coffeesCatalog, setCoffeesCatalog] = useState<Coffees[]>()
   const [shoppingCartDB, setShoppingCartDB] = useState<ShoppingCartProps[]>()
+  const [shoppingCartItens, setShoppingCartItens] = useState(0)
 
   useEffect(() => {
     CoffeesService.getAll().then((result) => {
@@ -43,9 +45,23 @@ export function GlobalContextProvider({
     })
   }, [])
 
+  useEffect(() => {
+    if (shoppingCartDB) {
+      const totalItens = shoppingCartDB.reduce((total, item) => {
+        return total + item.coffeeQuantity
+      }, 0)
+      setShoppingCartItens(totalItens)
+    }
+  }, [shoppingCartDB])
+
   return (
     <GlobalContext.Provider
-      value={{ coffeesCatalog, shoppingCartDB, setShoppingCartDB }}
+      value={{
+        coffeesCatalog,
+        shoppingCartDB,
+        shoppingCartItens,
+        setShoppingCartDB,
+      }}
     >
       {children}
     </GlobalContext.Provider>

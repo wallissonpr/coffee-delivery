@@ -9,10 +9,9 @@ import {
   HeaderShoppingCart,
   HeaderShoppingCartTotal,
 } from './styled'
-export function Header() {
-  const { shoppingCartDB } = useContext(GlobalContext)
 
-  const shoppingCartItens = shoppingCartDB?.map((qtd) => qtd.coffeeQuantity)
+export function Header() {
+  const { shoppingCartItens } = useContext(GlobalContext)
 
   return (
     <HeaderContainer>
@@ -28,9 +27,9 @@ export function Header() {
         <HeaderShoppingCart>
           <NavLink to={'/checkout'}>
             <ShoppingCart size={20} weight="fill" />
-            {shoppingCartItens && shoppingCartItens.length > 0 && (
+            {shoppingCartItens > 0 && (
               <HeaderShoppingCartTotal>
-                {shoppingCartItens.reduce((total, qty) => total + qty)}
+                {shoppingCartItens}
               </HeaderShoppingCartTotal>
             )}
           </NavLink>

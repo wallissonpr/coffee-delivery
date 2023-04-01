@@ -31,12 +31,13 @@ export function CoffeeProduct({ data }: CoffeeProductProps) {
   const newCartForm = useForm<NewCartFormData>({
     resolver: zodResolver(newCartFormValidationSchema),
     defaultValues: {
-      coffeeQuantity: undefined,
+      coffeeQuantity: 0,
     },
   })
 
   const { register, handleSubmit, watch, reset } = newCartForm
   const IsButtonDisable = !watch('coffeeQuantity')
+  const filteredCoffeeName = shoppingCartDB?.map((coffee) => coffee.coffeeName)
 
   function handleCreateNewItemCart(dataForm: NewCartFormData) {
     const newDataForm = {
@@ -45,16 +46,52 @@ export function CoffeeProduct({ data }: CoffeeProductProps) {
       coffeeName: data.title,
     }
 
-    ShoppingCartService.createCart(newDataForm).then((result) => {
-      if (result instanceof ApiException) {
-        alert(result.message)
-      } else {
-        if (shoppingCartDB !== undefined) {
-          setShoppingCartDB([...shoppingCartDB, result])
-        }
-      }
-    })
+    if (filteredCoffeeName?.includes(newDataForm.coffeeName)) {
+      const coffeeCartId = filteredCoffeeName.indexOf(data.title) + 1
 
+      const coffeeToUpdate = shoppingCartDB?.find(
+        (coffee) => coffee.id === coffeeCartId,
+      )
+      if (coffeeToUpdate) {
+        ShoppingCartService.updateCartById(coffeeCartId, {
+          ...coffeeToUpdate,
+          coffeeQuantity:
+            newDataForm.coffeeQuantity + coffeeToUpdate.coffeeQuantity,
+        }).then((result) => {
+          if (result instanceof ApiException) {
+            alert(result.message)
+          } else {
+            if (shoppingCartDB !== undefined) {
+              const newShoppingCart = shoppingCartDB.map((item) => {
+                if (item.id === coffeeCartId) {
+                  return {
+                    ...item,
+                    coffeeQuantity:
+                      newDataForm.coffeeQuantity +
+                      coffeeToUpdate.coffeeQuantity,
+                  }
+                } else {
+                  return item
+                }
+              })
+              setShoppingCartDB(newShoppingCart)
+            }
+          }
+        })
+      }
+    } else {
+      ShoppingCartService.createCart(newDataForm).then((result) => {
+        if (result instanceof ApiException) {
+          alert(result.message)
+        } else {
+          if (shoppingCartDB !== undefined) {
+            const newShoppingCart = shoppingCartDB.map((item) => item)
+            newShoppingCart.push(result)
+            setShoppingCartDB(newShoppingCart)
+          }
+        }
+      })
+    }
     reset()
   }
 
